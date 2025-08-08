@@ -10,7 +10,7 @@
 part of 'router.dart';
 
 abstract class _$AppRouter extends RootStackRouter {
-  // ignore: unused_element
+  // ignore: unused_element, unused_element_parameter
   _$AppRouter({super.navigatorKey});
 
   @override
@@ -19,10 +19,7 @@ abstract class _$AppRouter extends RootStackRouter {
       final args = routeData.argsAs<CryptoCoinRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: CryptoCoinScreen(
-          key: args.key,
-          currencyCode: args.currencyCode,
-        ),
+        child: CryptoCoinScreen(key: args.key, currencyCode: args.currencyCode),
       );
     },
     CryptoListRoute.name: (routeData) {
@@ -42,13 +39,10 @@ class CryptoCoinRoute extends PageRouteInfo<CryptoCoinRouteArgs> {
     required String currencyCode,
     List<PageRouteInfo>? children,
   }) : super(
-          CryptoCoinRoute.name,
-          args: CryptoCoinRouteArgs(
-            key: key,
-            currencyCode: currencyCode,
-          ),
-          initialChildren: children,
-        );
+         CryptoCoinRoute.name,
+         args: CryptoCoinRouteArgs(key: key, currencyCode: currencyCode),
+         initialChildren: children,
+       );
 
   static const String name = 'CryptoCoinRoute';
 
@@ -57,10 +51,7 @@ class CryptoCoinRoute extends PageRouteInfo<CryptoCoinRouteArgs> {
 }
 
 class CryptoCoinRouteArgs {
-  const CryptoCoinRouteArgs({
-    this.key,
-    required this.currencyCode,
-  });
+  const CryptoCoinRouteArgs({this.key, required this.currencyCode});
 
   final Key? key;
 
@@ -76,10 +67,7 @@ class CryptoCoinRouteArgs {
 /// [CryptoListScreen]
 class CryptoListRoute extends PageRouteInfo<void> {
   const CryptoListRoute({List<PageRouteInfo>? children})
-      : super(
-          CryptoListRoute.name,
-          initialChildren: children,
-        );
+    : super(CryptoListRoute.name, initialChildren: children);
 
   static const String name = 'CryptoListRoute';
 

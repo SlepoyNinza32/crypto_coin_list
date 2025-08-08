@@ -1,16 +1,29 @@
-# crypto_coins_list
+# 💰 Crypto Coin List
 
-A new Flutter project.
+A simple and beautiful Flutter Android app for viewing real-time cryptocurrency prices using the [CryptoCompare API](https://min-api.cryptocompare.com/).
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+- 📈 Live coin prices
+- 🔍 Coin detail view
+- 💾 Local caching using Hive
+- 🧭 Navigation using `auto_route`
+- 🧱 BLoC state management
+- 📋 Error handling
+- 📱 Clean and responsive UI
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠 Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter (Dart)
+- BLoC (`flutter_bloc`)
+- Dio for API calls
+- Hive for local storage
+- auto_route for navigation
+- talker for logging
+- path_provider
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📸 Screenshots
+
+<img src="assets/screen1.jpg" width="300"/>
+<img src="assets/screen2.jpg" width="300"/>
+<img src="assets/screen3.jpg" width="300"/>
